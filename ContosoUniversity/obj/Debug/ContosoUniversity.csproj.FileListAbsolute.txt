@@ -1,0 +1,5 @@
+E:\Applications\ContosoUniversity\ContosoUniversity\bin\ContosoUniversity.dll
+E:\Applications\ContosoUniversity\ContosoUniversity\bin\ContosoUniversity.pdb
+E:\Applications\ContosoUniversity\ContosoUniversity\obj\Debug\ResolveAssemblyReference.cache
+E:\Applications\ContosoUniversity\ContosoUniversity\obj\Debug\ContosoUniversity.dll
+E:\Applications\ContosoUniversity\ContosoUniversity\obj\Debug\ContosoUniversity.pdb

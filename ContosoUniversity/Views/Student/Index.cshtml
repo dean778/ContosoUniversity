@@ -1,0 +1,53 @@
+﻿@model IEnumerable<ContosoUniversity.Models.Student>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+@using (Html.BeginForm()) 
+{ 
+    <p> 
+        Find by name: @Html.TextBox("searchString")   
+        <input type="submit" value="Search" /></p> 
+}
+<table>
+    <tr>
+        <th></th>
+        <th>
+           @Html.ActionLink("LastName", "Index", new { sortOrder =ViewBag.NameSortParm})
+        </th>
+        <th>
+            FirstMidName
+        </th>
+        <th>
+             @Html.ActionLink("EnrollmentDate", "Index", new { sortOrder = ViewBag.DateSortParm })
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.StudentID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.StudentID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.StudentID })
+        </td>
+        <td>
+            @item.LastName
+        </td>
+        <td>
+            @item.FirstMidName
+        </td>
+        <td>
+            @String.Format("{0:g}", item.EnrollmentDate)
+        </td>
+    </tr>
+}
+
+</table>
+
